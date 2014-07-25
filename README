@@ -2,16 +2,22 @@ NAME
     String::JS - Utilities for Javascript string literal representation
 
 VERSION
-    This document describes version 0.01 of String::JS (from Perl
+    This document describes version 0.02 of String::JS (from Perl
     distribution String-JS), released on 2014-07-25.
 
 FUNCTIONS
-  encode_js_string($str) => STR
+  encode_js_string($str[, $mode]) => STR
     Encode Perl string $str to its JavaScript literal representation using
     double quotes ("""). This is currently implemented using JSON encoding.
 
-    An option to produce literal representation using single quotes ("'")
-    will be provided in the future.
+    If $mode is set to 1, will produce literal representation using single
+    quotes ("'") instead.
+
+    If $mode is set to 2, will produce single-quoted JS string to be put
+    inside a double-quoted JS string literal, useful for producing for
+    example jQuery expression like:
+
+     $("h2.contains('this is JS string inside another JS string')")
 
     Will die on failure.
 
