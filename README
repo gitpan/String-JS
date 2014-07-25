@@ -1,0 +1,54 @@
+NAME
+    String::JS - Utilities for Javascript string literal representation
+
+VERSION
+    This document describes version 0.01 of String::JS (from Perl
+    distribution String-JS), released on 2014-07-25.
+
+FUNCTIONS
+  encode_js_string($str) => STR
+    Encode Perl string $str to its JavaScript literal representation using
+    double quotes ("""). This is currently implemented using JSON encoding.
+
+    An option to produce literal representation using single quotes ("'")
+    will be provided in the future.
+
+    Will die on failure.
+
+  decode_js_string($js_str) => STR
+    Given a JavaScript string literal representation in $js_str, decode to
+    get the value.
+
+    Currently implemented using JSON decoding of stringified $js_str.
+
+    Currently does not support JavaScript string representation that uses
+    single quotes ("'").
+
+    Will die on failure.
+
+SEE ALSO
+    JSON
+
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/String-JS>.
+
+SOURCE
+    Source repository is at <https://github.com/sharyanto/perl-String-JS>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=String-JS>
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
